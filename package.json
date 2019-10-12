@@ -2,9 +2,10 @@
   "name": "nodb-project-1",
   "version": "0.1.0",
   "main": "server/index.js",
-  "proxy": "http://localhost.5150",
+  "proxy": "http://localhost:5150",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"

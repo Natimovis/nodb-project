@@ -9,6 +9,7 @@ export default class Header extends Component {
                 <button onClick={this.props.bodyAppear}>Body Types</button>
                 <button onClick={this.props.dietTypesAppear}>Diet Types</button>
                 <button onClick={this.props.yourPlanAppear}>Your Plan</button>
+                <button onClick={this.props.testimonyAppear}>Testimonials</button>
             </header>
         )
     }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import "./TopicBrowser.css";
-//Topics
 
 import BodyTypes from '../Topics/BodyTypes'
 import CaloricThreshold from '../Topics/CaloricThreshold'
 import DietTypes from '../Topics/DietTypes'
 import Header from '../Topics/Header'
 import Home from '../Topics/Home'
+import Testimony from '../Topics/Testimony'
+// import Testimonials from '../Topics/Testimonials'
+// import AddTestimony from '../Topics/AddTestimony'
 
 
 
@@ -18,16 +20,19 @@ export default class TopicBrowser extends Component {
             home:true,
             bodyTypes:false,
             diet:false,
-            yourPlan:false
+            yourPlan:false,
+            testimony:false
         }
     }
+    
 
     changePageHome = () => {
         this.setState({
             home:true,
             bodyTypes:false,
             diet:false,
-            yourPlan:false
+            yourPlan:false,
+            testimony:false
         })
 
     }
@@ -37,7 +42,8 @@ export default class TopicBrowser extends Component {
             home:false,
             bodyTypes:true,
             diet:false,
-            yourPlan:false
+            yourPlan:false,
+            testimony:false
         })
     }
 
@@ -46,7 +52,8 @@ export default class TopicBrowser extends Component {
             home:false,
             bodyTypes:false,
             diet:true,
-            yourPlan:false
+            yourPlan:false,
+            testimony:false
         })
     }
 
@@ -55,7 +62,18 @@ export default class TopicBrowser extends Component {
             home:false,
             bodyTypes:false,
             diet:false,
-            yourPlan:true
+            yourPlan:true,
+            testimony:false
+        })
+    }
+
+    changePageTestimony = () => {
+        this.setState({
+            home:false,
+            bodyTypes:false,
+            diet:false,
+            yourPlan:false,
+            testimony:true
         })
     }
     render() {
@@ -66,13 +84,13 @@ export default class TopicBrowser extends Component {
                 bodyAppear={this.changePageBody}
                 dietTypesAppear={this.changePageDiet} 
                 yourPlanAppear={this.changePagePlan}
+                testimonyAppear={this.changePageTestimony}
                 />
                 {this.state.home?<Home/>:null}
                 {this.state.bodyTypes?<BodyTypes/>:null}
                 {this.state.diet?<DietTypes/>:null}
                 {this.state.yourPlan?<CaloricThreshold/>:null}
-                
-           
+                {this.state.testimony?<Testimony/>:null}                         
                 
             </div>
         )
