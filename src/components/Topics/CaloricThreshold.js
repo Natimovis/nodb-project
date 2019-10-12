@@ -43,18 +43,6 @@ class CaloricThreshold extends Component {
                 : null})
             }  
     
-    // if (this.state.activity === 'sedentary') {
-    //     return maleBMR * 1.2
-    // } else if (this.state.activity === 'lightly active'){
-    //     return maleBMR * 1.375
-    // } else if (this.state.activity === 'moderately active'){
-    //     return maleBMR * 1.55
-    // } else if (this.state.activity === 'very active'){
-    //     return maleBMR * 1.725
-    // } else if (this.state.activity === 'extra active'){
-    //     return maleBMR * 1.9
-    // }
-    
     getFemaleBMR = () => {
         var heightInInches = (this.state.heightft*12 + +this.state.heightin);
         let femaleBMR = 655 +(4.35 * this.state.weight) + (4.7 * heightInInches)-(4.7*this.state.age);
