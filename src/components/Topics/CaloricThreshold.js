@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import YourPlan from './YourPlan/YourPlan'
 
 class CaloricThreshold extends Component {
 
@@ -32,49 +33,62 @@ class CaloricThreshold extends Component {
 
     getMaleBMR = () => {
         var heightInInches = (this.state.heightft*12 + +this.state.heightin);
-        console.log(heightInInches)
+        // console.log(heightInInches)
         let maleBMR = 66 + (6.23 * this.state.weight) + (12.7 * heightInInches) - (6.8 * this.state.age);
-        console.log(maleBMR);
-               this.setState({caloricThresh:this.state.activity === 'sedentary' ? `Your caloric threshold is ${(maleBMR * 1.2)}`
-                :this.state.activity === 'lightly active' ? `Your caloric threshold is ${(maleBMR * 1.375)}` 
-                :this.state.activity === 'moderately active' ? `Your caloric threshold is ${(maleBMR * 1.55)}`
-                :this.state.activity === 'very active' ? `Your caloric threshold is ${(maleBMR * 1.725)}`
-                :this.state.activity === 'extra active' ? `Your caloric threshold is ${(maleBMR * 1.9)}`
+        // console.log(maleBMR);
+               this.setState({caloricThresh:this.state.activity === 'sedentary' ? (maleBMR * 1.2)
+                :this.state.activity === 'lightly active' ? (maleBMR * 1.375) 
+                :this.state.activity === 'moderately active' ? (maleBMR * 1.55)
+                :this.state.activity === 'very active' ? (maleBMR * 1.725)
+                :this.state.activity === 'extra active' ? (maleBMR * 1.9)
                 : null})
             }  
     
     getFemaleBMR = () => {
         var heightInInches = (this.state.heightft*12 + +this.state.heightin);
         let femaleBMR = 655 +(4.35 * this.state.weight) + (4.7 * heightInInches)-(4.7*this.state.age);
-        // console.log(heightInInches);
-        console.log(femaleBMR);
-        
+        // console.log(femaleBMR);
+            this.setState({caloricThresh:this.state.activity === 'sedentary' ? (femaleBMR * 1.2)
+                :this.state.activity === 'lightly active' ? (femaleBMR * 1.375) 
+                :this.state.activity === 'moderately active' ? (femaleBMR * 1.55)
+                :this.state.activity === 'very active' ? (femaleBMR * 1.725)
+                :this.state.activity === 'extra active' ? (femaleBMR * 1.9)
+                : null})         
     }
 
     render() {
-        console.log(this.state)
+        // console.log(this.state)
 
 
        
 
         let ageArr = [];
-        for(let i = 10; i<=99; i++)
+        for(let i = 10; i<=99; i++) {
             ageArr.push(<option value={i}>{i}</option>)
-        
+        }
+
         let footArr = [];
         for(let i = 3; i <=8; i++) {
             footArr.push(<option value={i}>{i}</option>)
         }
-
+        
         let inchArr = [];
         for(let i=0; i<=11;i++) {
             inchArr.push(<option value={i}>{i}</option>)
         }
-
+        
         let weightArr = [];
         for(let i=75; i <=1200; i++) {
             weightArr.push(<option value={i}>{i}</option>)
         }
+        
+        let calThreshShow = `Your caloric threshold is ${this.state.caloricThresh}`
+        // console.log(calThreshShow);
+
+        let dupeCalThresh = `${this.state.caloricThresh}`
+        // console.log(dupeCalThresh + 'is the new duplicate');
+
+
         return (
             <div>
             <p> CaloricThreshold Component </p>
@@ -111,7 +125,11 @@ class CaloricThreshold extends Component {
                   <input type="submit" value="Submit" onClick={this.handleSubmit} disabled={this.state.age === -1 || this.state.heightft === -1 || this.state.heightin ===-1 ||
                 this.state.weight ===-1 || this.state.activity ===-1 || this.state.gender ===-1}/>
             </form>
-            <h1>{this.state.caloricThresh}</h1>
+            <h1>{calThreshShow}</h1>
+            
+            <YourPlan/>
+
+
             </div>
         )
     }
