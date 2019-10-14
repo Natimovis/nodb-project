@@ -223,53 +223,35 @@ class YourPlan extends Component {
 
 
     dietPlan2 = (thresh) => {
-        let iG1 = +thresh-200; 
-        let iG2 = +thresh+200;
+        let iG1 = +thresh; 
         let c1 = (iG1 * .5);
         let c2 = (iG1 * .6);
-        let c3 = (iG2 * .5);
-        let c4 = (iG2 * .6);
         let cV1 = (c1/4);
         let cV2 = (c2/4);
-        let cV3 = (c3/4);
-        let cV4 = (c4/4);
         let p1 = (iG1 * .2)
         let p2 = (iG1 * .3)
-        let p3 = (iG2 * .2)
-        let p4 = (iG2 * .3)
         let pV1 = (p1/4)
-        let pV2 = (p2/4)
-        let pV3 = (p3/4)
-        let pV4 = (p4/4)        
+        let pV2 = (p2/4)       
         let f1 = (iG1 * .2)
         let f2 = (iG1 * .3)
-        let f3 = (iG2 * .2)
-        let f4 = (iG2 * .3)
         let fV1 = (f1/9)
         let fV2 = (f2/9)
-        let fV3 = (f3/9)
-        let fV4 = (f4/9)
         
         let iG11 = +thresh-200; 
         let iG22 = +thresh+200;
-        let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
+        let c11 = (iG1 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
-        let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
+        let p11 = (iG1 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
-        let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
+        let f11 = (iG1 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
-        // console.log(`ecto maintain`, iG1,iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
+
+        // console.log(`ecto maintain` cV1, cV2, pV1, pV1, pV2, fV1, fV2,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr2 = []
-         const newArr2a = newArr2.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+         const newArr2a = newArr2.push(iG1, cV1, cV2, pV1, pV2, fV1, fV2,
+            `split 2`, iG11, iG22, cV11, pV11, fV11)
             // console.log(newArr2a)
             return newArr2;
     }
@@ -695,18 +677,60 @@ render() {
               191.35040000000004 482.7008000000001 382.7008000000001 53.63342222222223 42.52231111111112 */}
 
             {this.state.dietPlan1?
-            <p>You're caloric Threshold sits at {Math.floor(this.props.caloricThresh)} calories per day. To lose weight at around 1 pound a week consume around {Math.floor(newArr1AB[0])} 
+            <p>You're current caloric Threshold sits at {Math.floor(this.props.caloricThresh)} calories per day. To lose weight at around 1 pound a week consume around {Math.floor(newArr1AB[0])} 
             calories per day. To lose weight at a weight at a around 2 pounds per consume around {Math.floor(newArr1AB[1])} calories per day. 
             For 2 pounds lost per week range your carb intake between {Math.floor(newArr1AB[2])} and {Math.floor(newArr1AB[3])} grams per day. For 
             1 pound lost weekly range your carbs between {Math.floor(newArr1AB[3])} a day and {Math.floor(newArr1AB[4])} carbs daily. </p>
             :null}
-            {this.state.dietPlan2?<h1>Diet Plan 2</h1> :null}  
+            {this.state.dietPlan2?<p> Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
+            To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
+            Try to
+            Keep your carbohydrate intake between {Math.floor(newArr2AB[1])} and {Math.floor(newArr2AB[2])} grams per day,  
+            your protein intake between {Math.floor(newArr2AB[3])} and {Math.floor(newArr2AB[4])} grams per day, 
+            your fat intake between {Math.floor(newArr2AB[5])} and {Math.floor(newArr2AB[6])} grams per day. You should always try to 
+            keep your total caloric intake between {Math.floor(newArr2AB[8])} and {Math.floor(newArr2AB[9])} calories per day if your goal is to maintain your current weight. 
+            The above reccomendations would be considered the healthiest overall way to go about eating and maintaining your current weight, however there is also an alternative split that you may try
+            if you are still having
+            difficulty maintaining your current weight or building muscle. This is a 40, 40, 20 split. 40% protein, 40% carbs, and 20% fat.
+            To split your diet in this way Try to consume {Math.floor(newArr2AB[10])} grams of carbs per day, {Math.floor(newArr2AB[11])} grams of protein per day.
+            and {Math.floor(newArr2AB[12])} grams of fat in a day. No matter which split you choose health professionals advise that only 1/3rd of your fat intake come from saturated fat and
+            for the rest to come from either monounsaturated, or better yet polyunsaturated fats.</p> :null}  
             {this.state.dietPlan3?<h1>Diet Plan 3</h1> :null}
             {this.state.dietPlan4?<h1>Diet Plan 4</h1>:null}
-            {this.state.dietPlan5?<h1>Diet Plan 5</h1>:null}
+            {this.state.dietPlan5?
+            <p>
+            Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
+            To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
+            Try to
+            Keep your carbohydrate intake between {Math.floor(newArr2AB[1])} and {Math.floor(newArr2AB[2])} grams per day,  
+            your protein intake between {Math.floor(newArr2AB[3])} and {Math.floor(newArr2AB[4])} grams per day, 
+            your fat intake between {Math.floor(newArr2AB[5])} and {Math.floor(newArr2AB[6])} grams per day. You should always try to 
+            keep your total caloric intake between {Math.floor(newArr2AB[8])} and {Math.floor(newArr2AB[9])} calories per day if your goal is to maintain your current weight. 
+            The above reccomendations would be considered the healthiest overall way to go about eating and maintaining your current weight, however there is also an alternative split that you may try
+            if you are still having
+            difficulty maintaining your current weight or building muscle. This is a 40, 40, 20 split. 40% protein, 40% carbs, and 20% fat.
+            To split your diet in this way Try to consume {Math.floor(newArr2AB[10])} grams of carbs per day, {Math.floor(newArr2AB[11])} grams of protein per day.
+            and {Math.floor(newArr2AB[12])} grams of fat in a day. No matter which split you choose health professionals advise that only 1/3rd of your fat intake come from saturated fat and
+            for the rest to come from either monounsaturated, or better yet polyunsaturated fats.
+            </p>:null}
             {this.state.dietPlan6?<h1>Diet Plan 6</h1>:null}
             {this.state.dietPlan7?<h1>Diet Plan 7</h1>:null}
-            {this.state.dietPlan8?<h1>Diet Plan 8</h1>:null}
+            {this.state.dietPlan8?<p>
+            Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
+            To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
+            Try to
+            Keep your carbohydrate intake between {Math.floor(newArr2AB[1])} and {Math.floor(newArr2AB[2])} grams per day,  
+            your protein intake between {Math.floor(newArr2AB[3])} and {Math.floor(newArr2AB[4])} grams per day, 
+            your fat intake between {Math.floor(newArr2AB[5])} and {Math.floor(newArr2AB[6])} grams per day. You should always try to 
+            keep your total caloric intake between {Math.floor(newArr2AB[8])} and {Math.floor(newArr2AB[9])} calories per day if your goal is to maintain your current weight. 
+            The above reccomendations would be considered the healthiest overall way to go about eating and maintaining your current weight, however there is also an alternative split that you may try
+            if you are still having
+            difficulty maintaining your current weight or building muscle. This is a 40, 40, 20 split. 40% protein, 40% carbs, and 20% fat.
+            To split your diet in this way Try to consume {Math.floor(newArr2AB[10])} grams of carbs per day, {Math.floor(newArr2AB[11])} grams of protein per day.
+            and {Math.floor(newArr2AB[12])} grams of fat in a day. No matter which split you choose health professionals advise that only 1/3rd of your fat intake come from saturated fat and
+            for the rest to come from either monounsaturated, or better yet polyunsaturated fats.
+            </p>
+            :null}
             {this.state.dietPlan9?<h1>Diet Plan 9</h1>:null}
         </div>
         )
