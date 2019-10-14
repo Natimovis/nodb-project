@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+function Header(props) {
+    return(
 
-export default class Header extends Component {
-    render() {
-
-        return (
-            <header className = "header">
-                <button onClick={this.props.homeAppear}>Home </button>
-                <button onClick={this.props.bodyAppear}>Body Types</button>
-                <button onClick={this.props.dietTypesAppear}>Diet Types</button>
-                <button onClick={this.props.yourPlanAppear}>Your Plan</button>
-                <button onClick={this.props.testimonyAppear}>Testimonials</button>
-            </header>
+        <header className = "header">
+            <button onClick={props.homeAppear}>Home </button>
+            <button onClick={props.bodyAppear}>Body Types</button>
+            <button onClick={props.dietTypesAppear}>Diet Types</button>
+            <button onClick={props.yourPlanAppear}>Your Plan</button>
+            <button onClick={props.testimonyAppear}>Testimonials</button>
+    </header>
         )
     }
-}
+export default Header;

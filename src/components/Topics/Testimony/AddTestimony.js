@@ -51,7 +51,7 @@ class AddTestimony extends React.Component {
                     <input placeholder="Country" onChange={this.handleCountryChange} />
                     <input placeholder="Before Photo" onChange={this.handleImgBeforeChange} />
                     <input placeholder="After Photo" onChange={this.handleImgAfterChange} />
-                    <button onClick={this.handleFlexClick}>Flex on Bro's Philosophy</button>
+                    <button onClick={this.handleFlexClick}>Felt cute might delete later</button>
                 </form>
             </>
         )
