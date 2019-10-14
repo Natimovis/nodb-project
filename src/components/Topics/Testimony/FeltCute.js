@@ -20,10 +20,15 @@ class FeltCute extends React.Component {
        
         return (
             <div>
-               <h1>{this.props.val.city}</h1>
-                <h2>{this.props.val.country}</h2>
-                <img src={this.props.val.imgbefore} alt="place_img" />
-                <img src={this.props.val.imgafter} alt="place_img" />
+               <h2>{this.props.val.city}</h2>
+                <h1>{this.props.val.country}</h1>
+                <div className="beforeAndAfter">
+                <div className="before">Before Using Diet Plan
+                <img className="resultsPic" src={this.props.val.imgbefore} alt="place_img" />
+                </div>
+                <div className="after">After Using Diet Plan
+                <img className="resultsPic" src={this.props.val.imgafter} alt="place_img" /></div>
+                </div>
                 <button onClick={this.deleteTestimonial}>On second thought, I was lookin kinda small</button>  
             </div>
         )
