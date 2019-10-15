@@ -13,7 +13,7 @@ class CaloricThreshold extends Component {
             heightin: -1,
             age: -1,
             activityLevel: -1,
-            caloricThresh: ""
+            caloricThresh: "",
         }
     }
     handleInputChange = (e) => {
@@ -56,6 +56,13 @@ class CaloricThreshold extends Component {
                 : null})         
     }
 
+    // displayInitialCalThresh = () =>{
+    //     if (this.state.caloricThresh !== "") {
+    //         this.setState({showCalThresh1: "Your caloric threshold is" + this.state.caloricThresh})
+    //     }
+    //     return showCalThresh;
+    // }
+
     
     render() {
         // console.log(this.state)
@@ -83,20 +90,14 @@ class CaloricThreshold extends Component {
             weightArr.push(<option value={i}>{i}</option>)
         }
         
-        let showCalThresh= this.state.caloricThresh
+        let showCalThresh= this.state.caloricThresh;
 
-        // let testDisplay = 69
-        // console.log(testDisplay + "the first one");
-        // let newTest = showCalThresh + 7000;
-        // console.log(newTest);
-        
-        // showCalThresh = parseInt(showCalThresh);
-        // console.log(`this is showcal thresh parsed, ieally, ${showCalThresh}`)
+    
         
         
         return (
-            <div>
-            <p> CaloricThreshold Component </p>
+            <div className="calThreshComp">
+            <h2> Tell us a little bit about yourself </h2>
             <form>
               <select name="gender" id="gender" onChange={this.handleInputChange}>
                   <option>Select Gender</option>
@@ -130,7 +131,6 @@ class CaloricThreshold extends Component {
                   <input type="submit" value="Submit" onClick={this.handleSubmit} disabled={this.state.age === -1 || this.state.heightft === -1 || this.state.heightin ===-1 ||
                 this.state.weight ===-1 || this.state.activity ===-1 || this.state.gender ===-1}/>
             </form>
-            <h1>{showCalThresh}</h1>
             <YourPlan caloricThresh={this.state.caloricThresh}/>
 
             </div>

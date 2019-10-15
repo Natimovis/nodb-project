@@ -27,3 +27,42 @@
     margin-right: 15vw;
     font-size: 18px;
 }
+
+
+.resultsPic {
+    width: 30vw;
+    height: 40vh;
+}
+
+.before{
+    display:flex;
+    flex-direction: column;
+    font-size: 25px; 
+}
+
+.after{
+    display:flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.uploadResults{
+    text-align: center;
+}
+
+.dietTypes{
+    font-size: 18px;
+}
+
+.calThreshComp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yourPlan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

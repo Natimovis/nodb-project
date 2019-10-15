@@ -170,8 +170,8 @@ class YourPlan extends Component {
 
     
     dietPlan1 = (thresh) => {
-        let iG1 = +thresh-500; 
-        let iG2 = +thresh-1000;
+        let iG1 = +thresh-250; 
+        let iG2 = +thresh-500;
         let c1 = (iG1 * .5);
         let c2 = (iG1 * .6);
         let c3 = (iG2 * .5);
@@ -197,26 +197,20 @@ class YourPlan extends Component {
         let fV3 = (f3/9)
         let fV4 = (f4/9)
         
-        let iG11 = +thresh-500; 
-        let iG22 = +thresh-1000;
+        let iG11 = +thresh-300;
         let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
         let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
         let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
-        // console.log(`ecto lose`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
+
+        // console.log(`meso lose`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr1 = []
          const newArr1a = newArr1.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+             iG11, c11, cV11, p11, pV11, f11, fV11)
             // console.log(newArr1a)
             return newArr1;
     };
@@ -258,7 +252,7 @@ class YourPlan extends Component {
 
 
     dietPlan3 = (thresh) => {
-        let iG1 = +thresh+700; 
+        let iG1 = +thresh+600; 
         let iG2 = +thresh+1000;
         let c1 = (iG1 * .5);
         let c2 = (iG1 * .6);
@@ -285,26 +279,20 @@ class YourPlan extends Component {
         let fV3 = (f3/9)
         let fV4 = (f4/9)
         
-        let iG11 = +thresh+700; 
-        let iG22 = +thresh+1000;
+        
+        let iG11 = +thresh+1000;
         let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
         let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
         let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
         // console.log(` ecto gain weight`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr3 = []
          const newArr3a = newArr3.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+            `split 2`, iG11, cV11, pV11, fV11,)
             // console.log(newArr3a)
             return newArr3;
     }
@@ -337,26 +325,20 @@ class YourPlan extends Component {
         let fV3 = (f3/9)
         let fV4 = (f4/9)
         
-        let iG11 = +thresh-500; 
-        let iG22 = +thresh-1000;
+        let iG11 = +thresh-700;
         let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
         let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
         let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
+
         // console.log(`meso lose`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr4 = []
          const newArr4a = newArr4.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+             iG11, c11, cV11, p11, pV11, f11, fV11)
             // console.log(newArr4a)
             return newArr4;
     }
@@ -414,7 +396,7 @@ class YourPlan extends Component {
     }
 
     dietPlan6 = (thresh) => {
-        let iG1 = +thresh+300; 
+        let iG1 = +thresh+200; 
         let iG2 = +thresh+600;
         let c1 = (iG1 * .5);
         let c2 = (iG1 * .6);
@@ -441,26 +423,20 @@ class YourPlan extends Component {
         let fV3 = (f3/9)
         let fV4 = (f4/9)
         
-        let iG11 = +thresh-500; 
-        let iG22 = +thresh-1000;
+        
+        let iG11 = +thresh+500;
         let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
         let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
         let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
-        // console.log(`meso gain`, iG1,iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
+        // console.log(` ecto gain weight`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr6 = []
          const newArr6a = newArr6.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+            `split 2`, iG11, cV11, pV11, fV11,)
             // console.log(newArr6a)
             return newArr6;
     }
@@ -571,7 +547,7 @@ class YourPlan extends Component {
 
     dietPlan9 = (thresh) => {
         let iG1 = +thresh+300; 
-        let iG2 = +thresh+5000;
+        let iG2 = +thresh+600;
         let c1 = (iG1 * .5);
         let c2 = (iG1 * .6);
         let c3 = (iG2 * .5);
@@ -597,26 +573,20 @@ class YourPlan extends Component {
         let fV3 = (f3/9)
         let fV4 = (f4/9)
         
-        let iG11 = +thresh+700; 
-        let iG22 = +thresh+1000;
+        
+        let iG11 = +thresh+500;
         let c11 = (iG11 * .4);
-        let c22 = (iG22 * .4);
         let cV11 = (c11/4);
-        let cV22 = (c22/4);
         let p11 = (iG11 * .4)
-        let p22 = (iG22 * .4)
         let pV11 = (p11/4)
-        let pV22 = (p22/4)
         let f11 = (iG11 * .2)
-        let f22 = (iG22 * .2)
         let fV11 = (f11/9)
-        let fV22 = (f22/9)
-        // console.log(`endo gain`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
+        // console.log(` ecto gain weight`, iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV1, pV2,pV3, pV4, fV1, fV2, fV3, fV4,
         //  `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22 )
 
          const newArr9 = []
          const newArr9a = newArr9.push(iG1, iG2, cV1, cV2, cV3, cV4, pV1, pV2, pV3, pV4, fV1, fV2, fV3, fV4,
-            `split 2`, iG11, iG22, c11, c22, cV11, cV22, p11, p22, pV11, pV22, f11, f22, fV11, fV22)
+            `split 2`, iG11, cV11, pV11, fV11,)
             // console.log(newArr9a)
             return newArr9;
     }
@@ -652,8 +622,9 @@ render() {
 
 
     return (
-        <div>
-            <h2>YourPlan Component</h2>
+        <div className="yourPlan">
+            <h2>The above information will be used to calculate your caloric threshold, simply answer two more questions below and we will use that information to
+                give you a fully personalized plan to help reach your goals! </h2>
             <form>
                 <select name="bodyTypeTwo" id="bodyTypeTwo" onChange={this.handleInputChangeTwo}>
                    <option>Select your body type</option>
@@ -676,11 +647,30 @@ render() {
               1913.5040000000004 965.4016000000001 765.4016000000001 241.35040000000004 191.35040000000004 965.4016000000001 765.4016000000001 241.35040000000004 
               191.35040000000004 482.7008000000001 382.7008000000001 53.63342222222223 42.52231111111112 */}
 
-            {this.state.dietPlan1?
-            <p>You're current caloric Threshold sits at {Math.floor(this.props.caloricThresh)} calories per day. To lose weight at around 1 pound a week consume around {Math.floor(newArr1AB[0])} 
-            calories per day. To lose weight at a weight at a around 2 pounds per consume around {Math.floor(newArr1AB[1])} calories per day. 
-            For 2 pounds lost per week range your carb intake between {Math.floor(newArr1AB[2])} and {Math.floor(newArr1AB[3])} grams per day. For 
-            1 pound lost weekly range your carbs between {Math.floor(newArr1AB[3])} a day and {Math.floor(newArr1AB[4])} carbs daily. </p>
+            {this.state.dietPlan1?<p>
+             Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have an ectomorphic body type you will need to keep
+             your daily caloric intake between {Math.floor(newArr1AB[1])} and {Math.floor(newArr1AB[0])} calories in order to lose between 1 and 2 pounds weekly.
+             Consume {Math.floor(newArr1AB[0])} calories daily to lose around 1 pound of body fat  per week.
+             Consume {Math.floor(newArr1AB[1])} calories daily to lose around 2 pounds of body fat per week. 
+             Keep your carb intake between {Math.floor(newArr1AB[2])} and {Math.floor(newArr1AB[3])} grams daily to lose around 1 pound per week. 
+             Keep your carb intake between {Math.floor(newArr1AB[4])} and {Math.floor(newArr1AB[5])} grams daily to lose around 2 pounds per week. 
+             Keep your protein intake betweeen {Math.floor(newArr1AB[6])} and {Math.floor(newArr1AB[7])} grams daily to lose around 1 pound per week. 
+             Keep your protein intake between  {Math.floor(newArr1AB[8])} and {Math.floor(newArr1AB[9])} grams daily to lose around 2 pounds per week. 
+             Strive to keep your fat intake between {Math.floor(newArr1AB[10])} and {Math.floor(newArr1AB[11])} grams per day to lose approximately 1 pound each week.
+             Strive to keep your fat intake between {Math.floor(newArr1AB[12])} and {Math.floor(newArr1AB[13])} grams per day to lose approximately 2 pounds each week. 
+             The aforementioned diet would be considered healthiest way to go about reaching your weight loss goals overall, however There is another split that you
+              may want to experiment with that is considered reasonably healthy. Following this split may get you
+             more desirable results in a shorter time span. A major benefit to this particular split is you will be able to consume more protein consistently.
+             Protein is an excellent macro for both muscle gain, and fat loss. This means you can not only lose weight faster with this method, you can also build an athletic
+             physique at the same time. To implement this particular plan try
+             and place your daily calorie intake at around {Math.floor(newArr1AB[14])} calories
+             and then split your macro's as such, {Math.floor(newArr1AB[15])} grams of carbs daily, {Math.floor(newArr1AB[17])} grams of protein daily,
+             and {Math.floor(newArr1AB[16])} grams of fat daily. These proportions will give you a healthy 
+             and sufficient supply of all necessary macro's to fuel daily energy expenditure while supporting muscle growth. This particular weight loss plan will have you looking
+             very lean in no time. To compensate for the higher ratio of protein
+             you may want to consider supplementing with protein derived from milk, or egg. This protein will also have a more complete amino acid profile then nearly any other 
+             protein source, meaning is has a higher percentage of usability to build muscle. Be aware that muscle weighs more then fat as you step on the scale weekly, and consider
+             also taking measurements of your body fat percentage to get a better overall understanding of your true physical progress. </p>
             :null}
             {this.state.dietPlan2?<p> Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
             To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
@@ -695,10 +685,54 @@ render() {
             To split your diet in this way Try to consume {Math.floor(newArr2AB[10])} grams of carbs per day, {Math.floor(newArr2AB[11])} grams of protein per day.
             and {Math.floor(newArr2AB[12])} grams of fat in a day. No matter which split you choose health professionals advise that only 1/3rd of your fat intake come from saturated fat and
             for the rest to come from either monounsaturated, or better yet polyunsaturated fats.</p> :null}  
-            {this.state.dietPlan3?<h1>Diet Plan 3</h1> :null}
-            {this.state.dietPlan4?<h1>Diet Plan 4</h1>:null}
-            {this.state.dietPlan5?
+            {this.state.dietPlan3?<p>
+                Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have an ectomorphic body type you will need to keep
+                your daily caloric intake between {Math.floor(newArr3AB[0])} and {Math.floor(newArr3AB[1])} calories
+                 daily. {Math.floor(newArr3AB[0])} being a more moderate approach, and {Math.floor(newArr3AB[1])} being a more agressive approach. 
+                For moderate weight gain keep your carb intake between {Math.floor(newArr3AB[2])} and {Math.floor(newArr3AB[3])} carbs daily. 
+                For a more aggressive weight gain approach keep your carbs between {Math.floor(newArr3AB[4])} and {Math.floor(newArr3AB[5])} carbs daily. 
+                For moderate gains range your protein intake between {Math.floor(newArr3AB[6])} and {Math.floor(newArr3AB[7])} grams daily. 
+                For more accelerated gains range  your protein intake between {Math.floor(newArr3AB[8])} and {Math.floor(newArr3AB[9])} grams daily.
+                Consume between {Math.floor(newArr3AB[10])} and {Math.floor(newArr3AB[11])} grams of fat per day for moderate weight gain,
+                or consume between {Math.floor(newArr3AB[12])} and {Math.floor(newArr3AB[13])} grams of fat per day for agressive weight gain. 
+                The aforementioned diet would be considered healthiest way to go about gaining weight overall, however there is another split that 
+                is considered reasonably healthy. Following this split could cause more desirable results in a shorter time span. As an ectomorphic body type you will only be able to 
+                gain the majority of weight through muscle mass, and muscle comes from protein. Therefore you could try splitting your macro's as such
+                40% protein, 40% carbs, and 20% fat. This particular diet regimin is only advisable for an ectomorphic body type with a consistent training
+                regimin. Your carb intake will be lower, therefore you will need to boost your overall caloric intake to compensate for any potential loss
+                of protein due to the bodies need for glycogen and glucose during training. If you boost your daily overall intake to {Math.floor(newArr3AB[15])} or more calories this will be a healthy
+                and sufficient supply of all necessary macro's to fuel daily energy expenditure and maximize muscle growth. If you would like to try this particular split to 
+                reach your goals
+                aim to consume around {Math.floor(newArr3AB[16])} grams of carbs daily, {Math.floor(newArr3AB[17])} grams of protein daily,
+                and {Math.floor(newArr3AB[18])} grams of fat daily.
+            </p>:null}
+            {this.state.dietPlan4?
             <p>
+                Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have a mesomorphic body type you will need to keep
+                your daily caloric intake between {Math.floor(newArr4AB[1])} and {Math.floor(newArr4AB[0])} calories in order to lose between 1 and 2 pounds weekly.
+                Consume {Math.floor(newArr4AB[0])} calories daily to lose around 1 pound of body fat  per week.
+                Consume {Math.floor(newArr4AB[1])} calories daily to lose around 2 pounds of body fat per week. 
+                Keep your carb intake between {Math.floor(newArr4AB[2])} and {Math.floor(newArr4AB[3])} grams daily to lose around 1 pound per week. 
+                Keep your carb intake between {Math.floor(newArr4AB[4])} and {Math.floor(newArr4AB[5])} grams daily to lose around 2 pounds per week. 
+                Keep your protein intake betweeen {Math.floor(newArr4AB[6])} and {Math.floor(newArr4AB[7])} grams daily to lose around 1 pound per week. 
+                Keep your protein intake between  {Math.floor(newArr4AB[8])} and {Math.floor(newArr4AB[9])} grams daily to lose around 2 pounds per week. 
+                Strive to keep your fat intake between {Math.floor(newArr4AB[10])} and {Math.floor(newArr4AB[11])} grams per day to lose approximately 1 pound each week.
+                Strive to keep your fat intake between {Math.floor(newArr4AB[12])} and {Math.floor(newArr4AB[13])} grams per day to lose approximately 2 pounds each week. 
+                The aforementioned diet would be considered healthiest way to go about reaching your weight loss goals overall, however for some 
+                individuals looking to lose extensive amounts of weight it may take longer then they really want to be able to accomplish their goals only losing between 
+                1 and 2 pounds weekly. There is another split that you may want to experiment with that is considered reasonably healthy. Following this split may get you
+                more desirable results in a shorter time span. A major benefit to this particular split is you will be able to consume more protein consistently.
+                Protein is an excellent macro for both muscle gain, and fat loss. This means you can not only lose weight faster with this method, you can also build an athletic
+                physique at the same time. To implement this particular plan try
+                and place your daily calorie intake at around {Math.floor(newArr4AB[14])} calories
+                and then split your macro's as such, {Math.floor(newArr4AB[15])} grams of carbs daily, {Math.floor(newArr4AB[17])} grams of protein daily,
+                and {Math.floor(newArr4AB[16])} grams of fat daily. These proportions will give you a healthy 
+                and sufficient supply of all necessary macro's to fuel daily energy expenditure while supporting muscle growth. To compensate for the higher ratio of protein
+                you may want to consider supplementing with protein derived from milk, or egg products. This protein will also have a more complete amino acid profile then nearly any other 
+                protein source, meaning is has a higher percentage of usability to build muscle. Be aware that muscle weighs more then fat as you step on the scale weekly, and consider
+                also taking measurements of your body fat percentage to get a better overall understanding of your true physical progress. 
+            </p>:null}
+            {this.state.dietPlan5?<p>
             Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
             To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
             Try to
@@ -711,10 +745,56 @@ render() {
             difficulty maintaining your current weight or building muscle. This is a 40, 40, 20 split. 40% protein, 40% carbs, and 20% fat.
             To split your diet in this way Try to consume {Math.floor(newArr2AB[10])} grams of carbs per day, {Math.floor(newArr2AB[11])} grams of protein per day.
             and {Math.floor(newArr2AB[12])} grams of fat in a day. No matter which split you choose health professionals advise that only 1/3rd of your fat intake come from saturated fat and
-            for the rest to come from either monounsaturated, or better yet polyunsaturated fats.
-            </p>:null}
-            {this.state.dietPlan6?<h1>Diet Plan 6</h1>:null}
-            {this.state.dietPlan7?<h1>Diet Plan 7</h1>:null}
+            for the rest to come from either monounsaturated, or better yet polyunsaturated fats.</p> :null} 
+            
+            {this.state.dietPlan6?
+              <p>
+              Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have a mesomorphic body type you will need to keep
+              your daily caloric intake between {Math.floor(newArr6AB[0])} and {Math.floor(newArr6AB[1])} calories
+              daily. {Math.floor(newArr6AB[0])} being a more moderate approach, and {Math.floor(newArr6AB[1])} being a more agressive approach. 
+              For moderate weight gain keep your carb intake between {Math.floor(newArr6AB[2])} and {Math.floor(newArr6AB[3])} grams daily. 
+              For a more aggressive weight gain approach keep your carbs between {Math.floor(newArr6AB[4])} and {Math.floor(newArr6AB[5])} grams daily. 
+              For moderate gains range your protein intake between {Math.floor(newArr6AB[6])} and {Math.floor(newArr6AB[7])} grams daily. 
+              For more accelerated gains range  your protein intake between {Math.floor(newArr6AB[8])} and {Math.floor(newArr6AB[9])} grams daily.
+              Consume between {Math.floor(newArr6AB[10])} and {Math.floor(newArr6AB[11])} grams of fat per day for moderate weight gain,
+              or consume between {Math.floor(newArr6AB[12])} and {Math.floor(newArr6AB[13])} grams of fat per day for agressive weight gain. 
+              The aforementioned diet would be considered healthiest way to go about gaining weight overall, however there is another split that 
+              is considered reasonably healthy. Following this split could bring about more desirable results in a shorter time span. This particular plan
+              can be used to help you gain the right kind of weight, muscle weight.
+              With this plan try to keep your daily caloric intake at around {Math.floor(newArr6AB[15])} per day. This will provide your body with a healthy
+              and sufficient supply of all necessary macro's to fuel daily energy expenditure and maximize muscle growth. If you would like to try this particular split to 
+              reach your goals
+              aim to consume around {Math.floor(newArr6AB[16])} grams of carbs daily, {Math.floor(newArr6AB[17])} grams of protein daily,
+              and {Math.floor(newArr6AB[18])} grams of fat daily.
+          </p>
+            :null}
+            {this.state.dietPlan7?
+            <p>
+            Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have an endomorphic body type you will need to keep
+            your daily caloric intake between {Math.floor(newArr4AB[1])} and {Math.floor(newArr4AB[0])} calories in order to lose between 1 and 2 pounds weekly.
+            Consume {Math.floor(newArr4AB[0])} calories daily to lose around 1 pound of body fat  per week.
+            Consume {Math.floor(newArr4AB[1])} calories daily to lose around 2 pounds of body fat per week. 
+            Keep your carb intake between {Math.floor(newArr4AB[2])} and {Math.floor(newArr4AB[3])} grams daily to lose around 1 pound per week. 
+            Keep your carb intake between {Math.floor(newArr4AB[4])} and {Math.floor(newArr4AB[5])} grams daily to lose around 2 pounds per week. 
+            Keep your protein intake betweeen {Math.floor(newArr4AB[6])} and {Math.floor(newArr4AB[7])} grams daily to lose around 1 pound per week. 
+            Keep your protein intake between  {Math.floor(newArr4AB[8])} and {Math.floor(newArr4AB[9])} grams daily to lose around 2 pounds per week. 
+            Strive to keep your fat intake between {Math.floor(newArr4AB[10])} and {Math.floor(newArr4AB[11])} grams per day to lose approximately 1 pound each week.
+            Strive to keep your fat intake between {Math.floor(newArr4AB[12])} and {Math.floor(newArr4AB[13])} grams per day to lose approximately 2 pounds each week. 
+            The aforementioned diet would be considered healthiest way to go about reaching your weight loss goals overall, however for some 
+            individuals looking to lose extensive amounts of weight it may take longer then they really want to be able to accomplish their goals only losing between 
+            1 and 2 pounds weekly. There is another split that you may want to experiment with that is considered reasonably healthy. Following this split may get you
+            more desirable results in a shorter time span. A major benefit to this particular split is you will be able to consume more protein consistently.
+            Protein is an excellent macro for both muscle gain, and fat loss. This means you can not only lose weight faster with this method, you can also build an athletic
+            physique at the same time. To implement this particular plan try
+            and place your daily calorie intake at around {Math.floor(newArr4AB[14])} calories
+            and then split your macro's as such, {Math.floor(newArr4AB[15])} grams of carbs daily, {Math.floor(newArr4AB[17])} grams of protein daily,
+            and {Math.floor(newArr4AB[16])} grams of fat daily. These proportions will give you a healthy 
+            and sufficient supply of all necessary macro's to fuel daily energy expenditure while supporting muscle growth. To compensate for the higher ratio of protein
+            you may want to consider supplementing with protein derived from milk, or egg. This protein will also have a more complete amino acid profile then nearly any other 
+            protein source, meaning is has a higher percentage of usability to build muscle. Be aware that muscle weighs more then fat as you step on the scale weekly, and consider
+            also taking measurements of your body fat percentage to get a better overall understanding of your true physical progress.
+            </p>
+            :null}
             {this.state.dietPlan8?<p>
             Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
             To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
@@ -731,7 +811,28 @@ render() {
             for the rest to come from either monounsaturated, or better yet polyunsaturated fats.
             </p>
             :null}
-            {this.state.dietPlan9?<h1>Diet Plan 9</h1>:null}
+            {this.state.dietPlan9?
+            <p>
+            Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have an endomorphic body type you will want to keep
+            your daily caloric intake between {Math.floor(newArr9AB[0])} and {Math.floor(newArr9AB[1])} calories
+            daily. {Math.floor(newArr9AB[0])} being a more moderate approach, and {Math.floor(newArr9AB[1])} being a more agressive approach. 
+            For moderate weight gain keep your carb intake between {Math.floor(newArr9AB[2])} and {Math.floor(newArr9AB[3])} carbs daily. 
+            For a more aggressive weight gain approach keep your carbs between {Math.floor(newArr9AB[4])} and {Math.floor(newArr9AB[5])} carbs daily. 
+            For moderate gains range your protein intake between {Math.floor(newArr9AB[6])} and {Math.floor(newArr9AB[7])} grams daily. 
+            For more accelerated gains range  your protein intake between {Math.floor(newArr9AB[8])} and {Math.floor(newArr9AB[9])} grams daily.
+            Consume between {Math.floor(newArr9AB[10])} and {Math.floor(newArr9AB[11])} grams of fat per day for moderate weight gain,
+            or consume between {Math.floor(newArr9AB[12])} and {Math.floor(newArr9AB[13])} grams of fat per day for agressive weight gain. 
+            The aforementioned diet would be considered healthiest way to go about gaining weight overall, however there is another split that 
+            is considered reasonably healthy. Following this split could cause more desirable results in a shorter time span.
+            For weight gain that is primarily muscle and not fat you may want to try splitting your macro's as such
+            40% protein, 40% carbs, and 20% fat. This particular diet regimin may help you to be able to gain the right kind of weight.
+            With this plan try to keep your daily caloric intake at around {Math.floor(newArr9AB[15])} per day. This will provide your body with a healthy
+            and sufficient supply of all necessary macro's to fuel daily energy expenditure and maximize muscle growth. If you would like to try this particular split to 
+            reach your goals
+            aim to consume around {Math.floor(newArr9AB[16])} grams of carbs daily, {Math.floor(newArr9AB[17])} grams of protein daily,
+            and {Math.floor(newArr9AB[18])} grams of fat daily.
+        </p>
+            :null}
         </div>
         )
     }

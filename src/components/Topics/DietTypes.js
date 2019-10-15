@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class DietTypes extends Component {
     render() {
         return (
-            <div>
+            <div className="dietTypes">
                 <h1>Different Diet Types</h1>
                 <h2>The Paleolithic Diet</h2>
             <p>This popular diet, commonly referred to as paleo is based on the belief that a modern human should eat the way our
@@ -55,9 +55,38 @@ export default class DietTypes extends Component {
                     Diets high in saturated fat also tend to raise the cholesterol levels of the blood. The order of fat
                     from least to most healthy goes transfat, saturated fat, unsaturated fat, and then polyunsaturated fat. 
                     Health experts recommend that 2/3rds of a persons necessary fat consumption come from polyunsaturated fat 
-                    This ratio would be virtually impossible on a ketogenic diet.
+                    This ratio would be virtually impossible on a ketogenic diet. With all that being said this is the correct
+                    way to go about the keto diet if one makes the decision to still try this particular diet. Though doctors
+                    say the keto diet should be avoided there are a lot of 
+                    bodybuilders who like the ketosis diet anyway. When you are limiting your carb intake, you can test for ketosis by 
+                    purchasing ketostix at pretty much any pharmacy. As long as the test strips show no indication of ketosis you are
+                    not depriving yourself of carbohydrates. As soon as you see any color change you will know that your body is 
+                    lacking glycogen and you need to increase your carb intake. Bottom line. Cut down your carbs as much as you can,
+                    so long as the ketostix do not change color, when they do, increase your carbohydrate intake. 
                 </p>
+                <h2>Well what about fasting?</h2>
+                <p>Let's just get straight to the point on this one. Yes fasting is a surefire way to lose weight. It should also be noted
+                    that 60% of that weight loss is muscle loss.
+                </p>
+                <h2>The Doctor Recommended Diet</h2>
+                <p>So now we know what doesn't work, but that begs the question, what does work? The answer is not in what you eat as much as it is
+                    how much of it you eat. The bottom line is that if you eat less then your "caloric threshold" you will lose weight, if you eat
+                    more then your "caloric threshold" you will gain weight. In fact there was a nutrition professor at kansas state University who
+                    lost 27 lbs on a 2 month long snack food diet that put twinkies at the forefront just to prove this point. So how does one 
+                    know what their caloric threshold is and how much above
+                    or below it they should be at for their goals? Simple use this website! On the next page can enter some basic
+                    information about yourself and you will be given a personalized recommendation that accounts for all of the things you should consider
+                    before deciding on what and how you should eat.
+                    
 
+                <h2>Some basic information you may want to know before reading your recommendation</h2>
+                <p>Everything that you will eat, or even drink is considered to be a calorie. Calories can be divided into three subgroups, carbohydrates
+                    proteins, and fats. Every other food type you will hear about is a subcategory these three. For example sugar is simply a
+                    carbohydrate that has a high glycemic index. Everything is good in proper proportion except for trans fats. So how do we know what 
+                    the proper proportions are? Simple, tell us a little bit about yourself and we will tell you everything you need to know to reach your goals,
+                    based on your weight, height, how often you exercise, and some other key factors.
+                </p>
+                </p>
             </div>
         )
     }
