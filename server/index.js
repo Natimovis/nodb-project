@@ -1,5 +1,5 @@
 const express = require("express");
-const { addTestimony, getTestimony, removeTestimony } = require("./controller");
+const { addTestimony, getTestimony, editTestimony, removeTestimony } = require("./controller");
 
 const app = express();
 
@@ -10,6 +10,8 @@ const port = 5150;
 app.post("/api/testimonials", addTestimony);
 
 app.get("/api/testimonials", getTestimony);
+
+app.put("/api/testimonials/:id", editTestimony);
 
 app.delete("/api/testimonials/:id", removeTestimony);
 

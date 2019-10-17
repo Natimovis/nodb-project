@@ -5,6 +5,7 @@ import BodyTypes from '../Topics/BodyTypes'
 import CaloricThreshold from '../Topics/CaloricThreshold'
 import DietTypes from '../Topics/DietTypes'
 import Header from '../Topics/Header'
+import Footer from '../Topics/Footer'
 import Home from '../Topics/Home'
 // import AddTestimony from '../Topics/Testimony/AddTestimony'
 // import Testimony from '../Topics/Testimony/Testimony'
@@ -89,7 +90,13 @@ export default class TopicBrowser extends Component {
                 {this.state.diet?<DietTypes/>:null}
                 {this.state.yourPlan?<CaloricThreshold/>:null}
                 {this.state.testimony?<Test/>:null}                         
-                
+                <Footer
+                 homeAppear={this.changePageHome}
+                 bodyAppear={this.changePageBody}
+                 dietTypesAppear={this.changePageDiet} 
+                 yourPlanAppear={this.changePagePlan}
+                 testimonyAppear={this.changePageTestimony}
+                />
             </div>
         )
     }

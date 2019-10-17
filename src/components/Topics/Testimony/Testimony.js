@@ -6,9 +6,14 @@ class Testimony extends React.Component {
     constructor() {
         super();
         this.state = {
-            allTestimonials: []
+            allTestimonials: [],
+            afterImg: ""
         }
     }
+
+    // componentDidMount = () => {
+    //     this.refreshPage();
+    // }
 
     updateAllTestimonials = newArr => {
         this.setState({allTestimonials: newArr})
@@ -18,7 +23,7 @@ class Testimony extends React.Component {
     componentDidMount() {
         axios.get("/api/testimonials")
         .then(response => {
-            // console.log(response.data);
+            console.log(response.data);
             this.setState({allTestimonials: response.data});
         })
         .catch(error => {
@@ -27,10 +32,11 @@ class Testimony extends React.Component {
     }
 
     render() {
-
+        // const {afterImg} = this.state;
+        console.log(this.state.allTestimonials)
         let mappedTestimonials = this.state.allTestimonials.map((val) => {
             return (
-                <FeltCute val={val} updateAllTestimonials={this.updateAllTestimonials} />
+                <FeltCute afterImg={this.state.afterImg} val={val} allTestimonials={this.state.allTestimonials} updateAllTestimonials={this.updateAllTestimonials} />
             )
         })
 

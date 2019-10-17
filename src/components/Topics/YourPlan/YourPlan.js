@@ -592,7 +592,7 @@ class YourPlan extends Component {
     }
 
     
-render() {
+    render() {
     const newArr1AB = this.dietPlan1(this.props.caloricThresh);
     // console.log(`in global scope ${newArr1AB}`);
 
@@ -619,6 +619,9 @@ render() {
 
     const newArr9AB = this.dietPlan9(this.props.caloricThresh);
     // console.log(`in global scope ${newArr9AB}`);
+    
+    
+
 
 
     return (
@@ -642,10 +645,6 @@ render() {
                     disabled={this.state.bodyTypeTwo === -1 || this.state.dietGoalTwo === -1}/>
             </form>
         
-            {/* ecto los 2413.5040000000004 1913.5040000000004 301.68800000000005 362.02560000000005 239.18800000000005 287.02560000000005 120.67520000000002
-             181.01280000000003 95.67520000000002 143.51280000000003 53.63342222222223 80.45013333333334 42.52231111111112 63.783466666666676 split 2 2413.5040000000004
-              1913.5040000000004 965.4016000000001 765.4016000000001 241.35040000000004 191.35040000000004 965.4016000000001 765.4016000000001 241.35040000000004 
-              191.35040000000004 482.7008000000001 382.7008000000001 53.63342222222223 42.52231111111112 */}
 
             {this.state.dietPlan1?<p>
              Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. Because you have an ectomorphic body type you will need to keep
@@ -670,7 +669,8 @@ render() {
              very lean in no time. To compensate for the higher ratio of protein
              you may want to consider supplementing with protein derived from milk, or egg. This protein will also have a more complete amino acid profile then nearly any other 
              protein source, meaning is has a higher percentage of usability to build muscle. Be aware that muscle weighs more then fat as you step on the scale weekly, and consider
-             also taking measurements of your body fat percentage to get a better overall understanding of your true physical progress. </p>
+             also taking measurements of your body fat percentage to get a better overall understanding of your true physical progress. 
+             </p>  
             :null}
             {this.state.dietPlan2?<p> Your current caloric threshold is {Math.floor(this.props.caloricThresh)} calories per day. 
             To maintain your current weight try to keep your daily caloric intake as close to this number as possible. 
@@ -831,6 +831,7 @@ render() {
             reach your goals
             aim to consume around {Math.floor(newArr9AB[16])} grams of carbs daily, {Math.floor(newArr9AB[17])} grams of protein daily,
             and {Math.floor(newArr9AB[18])} grams of fat daily.
+
         </p>
             :null}
         </div>

@@ -18,6 +18,15 @@ function getTestimony(req, res) {
     res.status(200).json(broTestimony);
 }
 
+function editTestimony(req, res) {
+    for (let i=0;i<broTestimony.length; i++){
+        if (broTestimony[i].id == +req.params.id) {
+            broTestimony[i].imgafter = req.body.imgafter 
+        } 
+    }
+    res.status(200).json(broTestimony)
+}
+
 function removeTestimony(req, res) {
     const {id} = req.params;
     console.log(id);
@@ -38,5 +47,6 @@ function removeTestimony(req, res) {
 module.exports = {
     addTestimony,
     getTestimony,
-    removeTestimony
+    removeTestimony,
+    editTestimony
 }

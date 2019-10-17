@@ -10,7 +10,7 @@ export default class Home extends Component {
             <p>Welcome to the complete Bro's guide to total nutrition, and congratulations on taking the next step to become a better, healthier version of you!
                 Just like sculpting your body to match the portions of the statue of David, understanding proper health and nutrition is accomplished one step at a time.
                 For best overall results and so that you do not miss anything important it is recommended that first time visitors read through each section of this web site in the order listed below.</p>
-            <h2> 1. Body Types</h2>
+            <a name='link to body types'> 1. Body Types</a>
             <p>This section will give you the information you need to properly apply everything that follows.</p>
             <h2>2. Diet Types</h2>
             <p>Here you will learn the information that you really should know regarding some of the most popular modern dieting fads.</p>

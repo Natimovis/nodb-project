@@ -4,7 +4,17 @@
     justify-content: space-around;
     align-items: center;
     border: solid black 3px;
-    height: 7vh;
+    height: 6vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-end;
+    height: 6vh; 
+    border: solid black 3px;
 }
 
 .about {
