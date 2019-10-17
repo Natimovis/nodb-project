@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Axios from 'axios';
 
 export default class Update extends Component {
     constructor(props) {
@@ -18,9 +19,10 @@ export default class Update extends Component {
         console.log("updated")
         console.log(this.state.afterImg)
         const { afterImg } = this.state;
-        const { id, update } = this.props;
-        if( e.key === "Enter" && this.props.afterImg.length !== 0 ) {
-            update( id, afterImg );
+        const { id, editTestimonial } = this.props;
+        if( e.key === "Enter" && this.state.afterImg.length !== 0 ) {
+            editTestimonial( id, afterImg );
+            
             this.setState({ editing: false });
             console.log(this.state.afterImg)
         }

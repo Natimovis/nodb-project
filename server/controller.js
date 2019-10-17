@@ -19,9 +19,10 @@ function getTestimony(req, res) {
 }
 
 function editTestimony(req, res) {
+    console.log("hit")
     for (let i=0;i<broTestimony.length; i++){
         if (broTestimony[i].id == +req.params.id) {
-            broTestimony[i].imgafter = req.body.imgafter 
+            broTestimony[i].imgafter = req.body.afterImg 
         } 
     }
     res.status(200).json(broTestimony)

@@ -14,9 +14,12 @@ class FeltCute extends React.Component {
     
     
     editTestimonial = (id, afterImg) => {
-        axios.put(`/api/testimonials/${this.props.val.id}`,id,afterImg).then(response => {
+        axios.put(`/api/testimonials/${this.props.val.id}`, {
+            id,
+            afterImg
+        }).then(response => {
             // this.props.refreshPage();
-            this.props.updateAllTestimonials();
+            this.props.updateAllTestimonials(response.data);
             console.log(this.props.afterImg)
             console.log(response.data)
             this.setState({ afterImg: response.data })
@@ -48,7 +51,7 @@ class FeltCute extends React.Component {
                 <img className="resultsPic" src={this.props.val.imgafter} alt="place_img" /></div>
                 </div>
                 <button onClick={this.deleteTestimonial}>On second thought, I was lookin kinda small</button>  
-                <Update afterImg={this.props.afterImg} allTestimonials={this.props.allTestimonials} /> 
+                <Update afterImg={this.props.afterImg} allTestimonials={this.props.allTestimonials} editTestimonial={this.editTestimonial} /> 
             </div>
         )
     }
